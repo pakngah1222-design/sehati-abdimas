@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Peserta | Sehati Abdimas 2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0e3b2e',
+                            primary: '#1b5e4b',
+                            light: '#f4f6f0',
+                            accent: '#d4a373'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brand-light text-gray-800 font-sans min-h-screen flex flex-col justify-between">
+
+    <!-- HEADER / NAVBAR -->
+    <nav class="bg-brand-dark text-white py-4 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-wide">Sehati Abdimas</h1>
+            <div class="flex items-center space-x-6 text-sm font-medium">
+                <a href="index.html#tentang" class="hover:text-brand-accent transition hidden md:inline">Tentang</a>
+                <a href="https://wa.me/6285845170326" target="_blank" class="hover:text-brand-accent transition hidden md:inline">Contact Person</a>
+                <a href="index.html" class="bg-brand-accent hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded-lg transition shadow">
+                    <i class="fa-solid fa-house mr-2"></i>Kembali ke Beranda
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT WRAPPER -->
+    <main class="max-w-6xl mx-auto px-4 py-12 w-full my-auto">
+        <div class="grid md:grid-cols-12 gap-8 items-center bg-white rounded-3xl shadow-xl border overflow-hidden p-6 md:p-8">
+
+            <!-- KIRI: BANNER INFORMASI -->
+            <div class="md:col-span-6 bg-brand-dark text-white rounded-2xl p-8 flex flex-col justify-between min-h-[420px] relative overflow-hidden">
+                <div class="relative z-10">
+                    <span class="bg-brand-primary text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wider">Portal Peserta</span>
+                    <h2 class="text-3xl font-extrabold mt-4 leading-tight">Sehati Abdimas 2026</h2>
+                    <p class="text-sm text-gray-200 mt-3 leading-relaxed">
+                        Transformasi Hasil Pertanian Lokal menuju Ketahanan Pangan Berkelanjutan melalui Pendidikan Vokasi dan Hilirisasi Riset Terapan.
+                    </p>
+                </div>
+
+                <div class="relative z-10 mt-8">
+                    <div class="rounded-xl overflow-hidden border-2 border-brand-primary shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80" alt="Gedung Poltesa" class="w-full h-40 object-cover">
+                    </div>
+                    <p class="text-xs text-gray-300 mt-3 text-center">Politeknik Negeri Sambas • 16 November 2026</p>
+                </div>
+            </div>
+
+            <!-- KANAN: FORM LOGIN -->
+            <div class="md:col-span-6 p-2 md:p-6">
+                <div class="text-center mb-8">
+                    <div class="w-16 h-16 bg-brand-light border-2 border-brand-primary text-brand-primary rounded-full flex items-center justify-center mx-auto mb-3 text-2xl shadow-sm">
+                        <i class="fa-solid fa-user-lock"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-brand-dark">Login Peserta</h2>
+                    <p class="text-xs text-gray-500 mt-1">Masuk ke akun Anda untuk mengelola abstrak, full paper, dan jadwal Zoom.</p>
+                </div>
+
+                <form action="dashboard.html" method="GET" class="space-y-5">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Email Address</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <input type="email" placeholder="nama@email.com" class="w-full pl-10 pr-4 py-2.5 bg-brand-light border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-primary focus:bg-white outline-none text-sm transition" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Password</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <input type="password" placeholder="••••••••" class="w-full pl-10 pr-4 py-2.5 bg-brand-light border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-primary focus:bg-white outline-none text-sm transition" required>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between text-xs">
+                        <label class="flex items-center text-gray-600 cursor-pointer">
+                            <input type="checkbox" class="rounded text-brand-primary focus:ring-brand-primary mr-2">
+                            Ingat Saya
+                        </label>
+                        <a href="#" class="text-brand-primary hover:underline font-semibold">Lupa Password?</a>
+                    </div>
+
+                    <button type="submit" class="w-full bg-brand-accent hover:bg-yellow-600 text-white font-bold py-3 rounded-xl shadow-md transition duration-200 text-sm">
+                        Login
+                    </button>
+                </form>
+
+                <div class="text-center mt-6 text-xs text-gray-600">
+                    Belum punya akun? <a href="registrasi.html" class="text-brand-primary font-bold hover:underline">Registrasi Sekarang</a>
+                </div>
+
+                <div class="relative my-6">
+                    <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-200"></div></div>
+                    <div class="relative flex justify-center text-xs uppercase"><span class="bg-white px-2 text-gray-400">Atau login dengan</span></div>
+                </div>
+
+                <button type="button" onclick="window.location.href='dashboard.html'" class="w-full bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-semibold py-2.5 rounded-xl text-sm flex items-center justify-center space-x-2 transition shadow-sm">
+                    <i class="fa-brands fa-google text-red-500"></i>
+                    <span>Atau login dengan Google</span>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white py-4 text-center text-xs border-t border-brand-primary">
+        <p>&copy; 2026 Politeknik Negeri Sambas. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

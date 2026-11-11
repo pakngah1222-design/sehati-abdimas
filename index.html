@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar Nasional Sehati Abdimas 2026 | Politeknik Negeri Sambas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0e3b2e',
+                            primary: '#1b5e4b',
+                            light: '#f4f6f0',
+                            accent: '#d4a373'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brand-light text-gray-800 font-sans antialiased">
+
+    <!-- NAVBAR STICKY -->
+    <nav class="sticky top-0 z-50 bg-brand-dark text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-3">
+                    <span class="text-xl font-bold tracking-wide">Sehati Abdimas</span>
+                </div>
+                <div class="hidden md:flex space-x-6 text-sm font-medium">
+                    <a href="#tentang" class="hover:text-brand-accent transition">Tentang</a>
+                    <a href="#narasumber" class="hover:text-brand-accent transition">Narasumber</a>
+                    <a href="#scope" class="hover:text-brand-accent transition">Scope</a>
+                    <a href="#timeline" class="hover:text-brand-accent transition">Timeline</a>
+                    <a href="#template" class="hover:text-brand-accent transition">Template</a>
+                    <a href="#publikasi" class="hover:text-brand-accent transition">Publikasi</a>
+                    <a href="#venue" class="hover:text-brand-accent transition">Venue</a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="login.html" class="text-sm font-medium hover:text-brand-accent transition">Login</a>
+                    <a href="registrasi.html" class="bg-brand-accent hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded-lg text-sm transition shadow">Registrasi</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="bg-brand-dark text-white py-16 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <span class="inline-block bg-brand-primary text-xs px-3 py-1 rounded-full mb-4 font-semibold tracking-wider">Call for Paper | Seminar Nasional, Politeknik Negeri Sambas</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">Sehati Abdimas 2026</h1>
+                <p class="text-lg text-gray-200 mb-6">“Transformasi Hasil Pertanian Lokal menuju Ketahanan Pangan Berkelanjutan melalui Pendidikan Vokasi dan Hilirisasi Riset Terapan.”</p>
+                <div class="flex space-x-4">
+                    <a href="registrasi.html" class="bg-brand-accent hover:bg-yellow-600 text-white font-bold px-6 py-3 rounded-lg shadow transition">Registrasi</a>
+                    <a href="#timeline" class="border border-white hover:bg-white hover:text-brand-dark text-white font-bold px-6 py-3 rounded-lg transition">Lihat Timeline</a>
+                </div>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-brand-primary">
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80" alt="Gedung Poltesa" class="w-full h-80 object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNTDOWN & INFO PELAKSANAAN -->
+    <section class="py-12 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-brand-dark mb-2">Menuju pelaksanaan, 16 November 2026</h2>
+            
+            <!-- Realtime Countdown Timer JS -->
+            <div class="flex justify-center space-x-3 md:space-x-4 my-6 text-white" id="countdown">
+                <div class="bg-brand-dark p-3 md:p-4 rounded-xl w-20 md:w-24 shadow">
+                    <span id="days" class="text-2xl md:text-3xl font-extrabold block">00</span>
+                    <span class="text-xs uppercase text-gray-300">Hari</span>
+                </div>
+                <div class="bg-brand-dark p-3 md:p-4 rounded-xl w-20 md:w-24 shadow">
+                    <span id="hours" class="text-2xl md:text-3xl font-extrabold block">00</span>
+                    <span class="text-xs uppercase text-gray-300">Jam</span>
+                </div>
+                <div class="bg-brand-dark p-3 md:p-4 rounded-xl w-20 md:w-24 shadow">
+                    <span id="minutes" class="text-2xl md:text-3xl font-extrabold block">00</span>
+                    <span class="text-xs uppercase text-gray-300">Menit</span>
+                </div>
+                <div class="bg-brand-dark p-3 md:p-4 rounded-xl w-20 md:w-24 shadow">
+                    <span id="seconds" class="text-2xl md:text-3xl font-extrabold block">00</span>
+                    <span class="text-xs uppercase text-gray-300">Detik</span>
+                </div>
+            </div>
+
+            <!-- Detail Metadata -->
+            <div class="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto text-sm text-gray-600 mt-6">
+                <div class="p-4 bg-brand-light rounded-lg border">
+                    <i class="fa-regular fa-calendar-check text-brand-primary text-xl mb-1"></i>
+                    <p class="font-semibold text-gray-900">Senin, 16 November 2026</p>
+                </div>
+                <div class="p-4 bg-brand-light rounded-lg border">
+                    <i class="fa-solid fa-location-dot text-brand-primary text-xl mb-1"></i>
+                    <p class="font-semibold text-gray-900">Aula Terpadu I, Politeknik Negeri Sambas</p>
+                </div>
+                <div class="p-4 bg-brand-light rounded-lg border">
+                    <i class="fa-solid fa-video text-brand-primary text-xl mb-1"></i>
+                    <p class="font-semibold text-gray-900">Luring dan daring (Zoom)</p>
+                </div>
+            </div>
+
+            <!-- Penyelenggara Badges -->
+            <div class="mt-8 text-xs text-gray-500 uppercase tracking-wider font-semibold">Diselenggarakan oleh:</div>
+            <div class="flex flex-wrap justify-center items-center gap-4 mt-3 text-sm font-bold text-brand-dark">
+                <span class="bg-brand-light px-4 py-2 rounded-md border">Politeknik Negeri Sambas</span>
+                <span class="bg-brand-light px-4 py-2 rounded-md border">Kementerian Pendidikan Tinggi, Sains, dan Teknologi</span>
+                <span class="bg-brand-light px-4 py-2 rounded-md border">Diktisaintek Berdampak</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION TENTANG -->
+    <section id="tentang" class="py-16 max-w-7xl mx-auto px-4">
+        <div class="bg-white rounded-2xl shadow-md p-8 md:p-12 border">
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-4">Tentang Sehati Abdimas 2026</h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+                Seminar Nasional Sehati Abdimas 2026 merupakan forum ilmiah tahunan yang diselenggarakan oleh Politeknik Negeri Sambas sebagai wujud komitmen perguruan tinggi dalam mengeskalasi dampak hasil penelitian dan pengabdian kepada masyarakat.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-6">
+                Tahun ini Sehati Abdimas mengangkat tema <strong>“Transformasi Hasil Pertanian Lokal menuju Ketahanan Pangan Berkelanjutan melalui Pendidikan Vokasi dan Hilirisasi Riset Terapan”</strong>. Kegiatan ini menjadi ruang perjumpaan strategis yang mengintegrasikan peran akademisi, peneliti, praktisi, pemerintah, dan pelaku industri untuk mendorong komoditas unggulan daerah agar memiliki nilai tambah tinggi.
+            </p>
+
+            <h3 class="font-bold text-brand-dark text-lg mb-3">Tujuan Kegiatan</h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-600 mb-8">
+                <li>Memublikasikan dan mendiseminasikan hasil penelitian terapan serta program pengabdian kepada masyarakat terkini.</li>
+                <li>Mengakselerasi komersialisasi teknologi tepat guna dari kampus ke masyarakat.</li>
+                <li>Mendukung kemandirian pangan dan pertumbuhan ekonomi berkelanjutan.</li>
+            </ul>
+
+            <div class="bg-brand-light p-6 rounded-xl border border-brand-primary/20">
+                <h4 class="font-bold text-brand-dark mb-2">Mengundang Presenter:</h4>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-white px-3 py-1 rounded-full text-sm font-medium border shadow-sm">Peneliti</span>
+                    <span class="bg-white px-3 py-1 rounded-full text-sm font-medium border shadow-sm">Dosen</span>
+                    <span class="bg-white px-3 py-1 rounded-full text-sm font-medium border shadow-sm">Praktisi</span>
+                    <span class="bg-white px-3 py-1 rounded-full text-sm font-medium border shadow-sm">Mahasiswa</span>
+                </div>
+                <p class="text-xs text-brand-primary mt-3 font-semibold">* Registrasi presenter dan non-presenter free.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION NARASUMBER -->
+    <section id="narasumber" class="py-16 bg-white border-t border-b">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-brand-primary font-bold text-sm tracking-wider uppercase">Pembicara</span>
+                <h2 class="text-3xl font-bold text-brand-dark mt-1">Narasumber</h2>
+                <p class="text-gray-600 mt-2">Tiga pakar yang akan berbagi pengalaman riset dan penerapannya di lapangan.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Speaker 1 -->
+                <div class="bg-brand-light rounded-xl overflow-hidden shadow border p-6 text-center">
+                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden border-2 border-brand-primary">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Prof. Feri" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark">Prof. Dr. Ir. Feri Kusnandar, M.Sc.</h3>
+                    <p class="text-xs text-gray-500 mt-1">Ketua PATPI Pusat<br>IPB University</p>
+                    <a href="#" class="inline-block mt-4 text-sm font-semibold text-brand-primary hover:underline">Lihat profil <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+
+                <!-- Speaker 2 -->
+                <div class="bg-brand-light rounded-xl overflow-hidden shadow border p-6 text-center">
+                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden border-2 border-brand-primary">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Prof. Ferry" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark">Prof. Dr. Eng. Ir. Ferry Hadary, S.T., M.Eng.</h3>
+                    <p class="text-xs text-gray-500 mt-1">Kepala Laboratorium Teknik Kendali<br>Universitas Tanjungpura</p>
+                    <a href="#" class="inline-block mt-4 text-sm font-semibold text-brand-primary hover:underline">Lihat profil <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+
+                <!-- Speaker 3 -->
+                <div class="bg-brand-light rounded-xl overflow-hidden shadow border p-6 text-center">
+                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden border-2 border-brand-primary">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Dr. Oke" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark">Dr. Oke Anandika Lestari, S.TP., M.Si.</h3>
+                    <p class="text-xs text-gray-500 mt-1">Ketua PATPI Cabang Pontianak<br>Universitas Tanjungpura</p>
+                    <a href="#" class="inline-block mt-4 text-sm font-semibold text-brand-primary hover:underline">Lihat profil <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION SCOPE -->
+    <section id="scope" class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="text-brand-primary font-bold text-sm tracking-wider uppercase">Call for Paper</span>
+            <h2 class="text-3xl font-bold text-brand-dark mt-1">Scope Penelitian & Pengabdian</h2>
+            <p class="text-gray-600 mt-2">Scope penelitian meliputi sembilan bidang berikut, ditambah scope pengabdian.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-xl shadow border">
+                <h3 class="font-bold text-brand-dark text-lg mb-2"><i class="fa-solid fa-hand-holding-heart text-brand-accent mr-2"></i> Scope Pengabdian</h3>
+                <p class="text-sm text-gray-600">Multidisiplin ilmu. Hasil pemberdayaan masyarakat yang menjadi solusi konkret berbasis teknologi terapan.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow border">
+                <h3 class="font-bold text-brand-dark text-lg mb-2"><i class="fa-solid fa-seedling text-brand-accent mr-2"></i> Scope Penelitian</h3>
+                <p class="text-sm text-gray-600">Mencakup 9 bidang utama inovasi riset terapan vokasi.</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
+            <div class="bg-white p-4 rounded-xl shadow border hover:border-brand-primary transition font-semibold text-gray-700">Pertanian</div>
+            <div class="bg-white p-4 rounded-xl shadow border hover:border-brand-primary transition font-semibold text-gray-700">Mesin Pertanian</div>
+            <div class="bg-white p-4 rounded-xl shadow border hover:border-brand-primary transition font-semibold text-gray-700">Pangan</div>
+            <div class="bg-white p-4 rounded-xl shadow border hover:border-brand-primary transition font-semibold text-gray-700">Perikanan</div>
+            <div class="bg-white p-4 rounded-xl shadow border hover:border-brand-primary transition font-semibold text-gray-700">Teknologi Informasi</div>
+            <div class="bg-white p-4 rounded-xl shadow border hover:border-brand-primary transition font-semibold text-gray-700">Mesin</div>
+            <div class="bg-white p-4 rounded-xl shadow border hover:border-brand-primary transition font-semibold text-gray-700">Multimedia</div>
+            <div class="bg-white p-4 rounded-xl shadow border hover:border-brand-primary transition font-semibold text-gray-700">Pariwisata</div>
+            <div class="bg-white p-4 rounded-xl shadow border hover:border-brand-primary transition font-semibold text-gray-700">Akuntansi</div>
+        </div>
+    </section>
+
+    <!-- SECTION TIMELINE -->
+    <section id="timeline" class="py-16 bg-white border-t border-b">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-brand-primary font-bold text-sm tracking-wider uppercase">Timeline</span>
+                <h2 class="text-3xl font-bold text-brand-dark mt-1">Tanggal Penting</h2>
+                <p class="text-gray-600 mt-2">Catat tanggalnya supaya tidak terlewat.</p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="flex flex-col md:flex-row bg-brand-light p-6 rounded-xl border items-start md:items-center justify-between">
+                    <div>
+                        <span class="text-xs bg-gray-300 text-gray-700 px-3 py-1 rounded-full font-semibold">Selesai</span>
+                        <h3 class="font-bold text-lg text-brand-dark mt-2">12-31 Oktober 2026 — Pendaftaran dan submit abstrak</h3>
+                        <p class="text-sm text-gray-600">Registrasi peserta dan submit abstrak.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row bg-brand-light p-6 rounded-xl border items-start md:items-center justify-between border-brand-primary">
+                    <div>
+                        <span class="text-xs bg-brand-primary text-white px-3 py-1 rounded-full font-semibold">Berikutnya</span>
+                        <h3 class="font-bold text-lg text-brand-dark mt-2">10 November 2026 — Submit full paper</h3>
+                        <p class="text-sm text-gray-600">Batas akhir submit full paper.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row bg-brand-light p-6 rounded-xl border items-start md:items-center justify-between">
+                    <div>
+                        <span class="text-xs bg-yellow-600 text-white px-3 py-1 rounded-full font-semibold">Agenda Utama</span>
+                        <h3 class="font-bold text-lg text-brand-dark mt-2">16 November 2026 — Pelaksanaan seminar nasional</h3>
+                        <p class="text-sm text-gray-600">Presentasi karya secara luring dan daring.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row bg-brand-light p-6 rounded-xl border items-start md:items-center justify-between">
+                    <div>
+                        <span class="text-xs bg-gray-300 text-gray-700 px-3 py-1 rounded-full font-semibold">Publikasi</span>
+                        <h3 class="font-bold text-lg text-brand-dark mt-2">25 Desember 2026 — Book of Program</h3>
+                        <p class="text-sm text-gray-600">Publikasi Book of Program.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION TEMPLATE -->
+    <section id="template" class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="text-brand-primary font-bold text-sm tracking-wider uppercase">Unduhan</span>
+            <h2 class="text-3xl font-bold text-brand-dark mt-1">Template Abstrak</h2>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow border max-w-2xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div>
+                <h3 class="font-bold text-brand-dark">Template Abstrak Sehati Abdimas 2026</h3>
+                <p class="text-xs text-gray-500 mt-1">Format Word (.docx), 1,6 MB • Diperbarui 22 September 2026</p>
+                <p class="text-sm text-gray-600 mt-2">Gunakan template ini untuk submit abstrak. Template berisi format, struktur, dan author guidelines yang diperlukan.</p>
+            </div>
+            <a href="#" class="mt-4 md:mt-0 bg-brand-primary hover:bg-brand-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition shadow">
+                <i class="fa-solid fa-download mr-2"></i>Download
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION PUBLIKASI & BIAYA -->
+    <section id="publikasi" class="py-16 bg-white border-t border-b">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-brand-primary font-bold text-sm tracking-wider uppercase">Biaya dan Publikasi</span>
+                <h2 class="text-3xl font-bold text-brand-dark mt-1">Biaya Partisipasi dan Publikasi</h2>
+                <p class="text-gray-600 mt-2">Registrasi dan submit abstrak free. Biaya publikasi dibayar saat submit full paper, sesuai pilihan publikasi.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-brand-light p-6 rounded-xl border">
+                    <h3 class="font-bold text-lg text-brand-dark mb-4"><i class="fa-solid fa-user-check text-brand-primary mr-2"></i> Biaya Partisipasi (Free)</h3>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li><strong>Presenter:</strong> Registrasi dan submit abstrak tanpa biaya.</li>
+                        <li><strong>Non-presenter:</strong> Ikut seminar tanpa biaya, luring maupun daring.</li>
+                    </ul>
+                </div>
+                <div class="bg-brand-light p-6 rounded-xl border">
+                    <h3 class="font-bold text-lg text-brand-dark mb-4"><i class="fa-solid fa-book-open text-brand-primary mr-2"></i> Biaya Publikasi Full Paper</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>Prosiding Sehati Abdimas (Internal Poltesa): <strong>Rp100.000</strong></li>
+                        <li>Prosiding Sehati Abdimas (Eksternal Poltesa): <strong>Rp150.000</strong></li>
+                        <li>Jurnal Hippocampus (Sinta 4): <strong>Rp500.000</strong></li>
+                        <li>Jurnal Nekton (Sinta 4): <strong>Rp600.000</strong></li>
+                        <li>Jurnal Agroindustri Pangan (Sinta 5): <strong>Rp600.000</strong></li>
+                        <li>Jurnal Mekanisasi / Rambu / DIPAMAS: <strong class="text-green-600">Free</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION VENUE -->
+    <section id="venue" class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="text-brand-primary font-bold text-sm tracking-wider uppercase">Venue</span>
+            <h2 class="text-3xl font-bold text-brand-dark mt-1">Lokasi Seminar</h2>
+            <p class="text-gray-600 mt-2">Seminar dilaksanakan luring di kampus dan daring lewat Zoom.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-8 rounded-2xl shadow border">
+            <div>
+                <h3 class="text-xl font-bold text-brand-dark mb-4">Politeknik Negeri Sambas</h3>
+                <p class="text-gray-600 mb-4"><strong>Luring:</strong> Aula Terpadu I, Politeknik Negeri Sambas, Sambas, Kalimantan Barat.</p>
+                <p class="text-gray-600 mb-6"><strong>Daring:</strong> Zoom Meeting (Link diumumkan panitia melalui dashboard & email terdaftar).</p>
+                <a href="registrasi.html" class="inline-block bg-brand-accent hover:bg-yellow-600 text-white font-bold px-6 py-3 rounded-lg shadow transition">Buka Halaman Registrasi</a>
+            </div>
+            <div class="rounded-xl overflow-hidden shadow border">
+                <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" alt="Kampus" class="w-full h-64 object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white py-12 border-t border-brand-primary">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-3">Sehati Abdimas</h3>
+                <p class="text-sm text-gray-300">Seminar Nasional Sehati Abdimas 2026<br>Politeknik Negeri Sambas</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-3">Contact Person</h4>
+                <p class="text-sm text-gray-300">Pahmi: +62 858-4517-0326</p>
+                <a href="https://wa.me/6285845170326" target="_blank" class="inline-block mt-2 bg-green-600 hover:bg-green-700 text-white text-xs px-3 py-1.5 rounded-md font-semibold transition">
+                    <i class="fa-brands fa-whatsapp mr-1"></i> Chat WhatsApp
+                </a>
+            </div>
+            <div>
+                <h4 class="font-bold mb-3">Lokasi</h4>
+                <p class="text-sm text-gray-300">Sambas, Kalimantan Barat</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-400 mt-10 pt-4 border-t border-brand-primary">
+            &copy; 2026 Politeknik Negeri Sambas. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- SCRIPT COUNTDOWN TIMER -->
+    <script>
+        const targetDate = new Date("November 16, 2026 08:00:00").getTime();
+        setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance > 0) {
+                document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+                document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

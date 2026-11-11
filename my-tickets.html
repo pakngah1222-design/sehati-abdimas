@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tickets | Sehati Abdimas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brand: { dark: '#0e3b2e', primary: '#1b5e4b', light: '#f4f6f0', accent: '#d4a373' } }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans min-h-screen flex">
+
+    <!-- SIDEBAR -->
+    <aside class="w-64 bg-brand-dark text-white flex flex-col justify-between hidden md:flex min-h-screen shadow-lg">
+        <div>
+            <div class="p-6 text-2xl font-black tracking-wider border-b border-brand-primary">
+                Sehati <span class="text-brand-accent">Abdimas</span>
+            </div>
+            <nav class="p-4 space-y-1 text-sm font-medium">
+                <a href="dashboard.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-brand-primary/50 text-gray-300 transition">
+                    <i class="fa-solid fa-house"></i><span>Dashboard</span>
+                </a>
+                <a href="events.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-brand-primary/50 text-gray-300 transition">
+                    <i class="fa-regular fa-calendar-days"></i><span>Events</span>
+                </a>
+                <a href="my-tickets.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-brand-primary text-white shadow">
+                    <i class="fa-solid fa-ticket"></i><span>My Tickets</span>
+                </a>
+            </nav>
+        </div>
+        <div class="p-4 border-t border-brand-primary">
+            <a href="index.html" class="flex items-center space-x-2 text-xs text-red-300 hover:text-white px-4 py-2 rounded-lg transition">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i><span>Keluar ke Beranda Kampus</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- KONTEN UTAMA -->
+    <div class="flex-1 flex flex-col min-w-0">
+        <header class="bg-white border-b h-16 flex items-center justify-between px-6 shadow-sm">
+            <span class="text-sm font-semibold text-gray-700"><a href="dashboard.html" class="text-brand-primary hover:underline">Home</a> / My Tickets</span>
+            <div class="flex items-center space-x-3">
+                <span class="text-xs font-bold text-brand-dark">Dadang Ngah</span>
+                <div class="w-9 h-9 bg-brand-dark text-white rounded-full flex items-center justify-center font-bold text-sm">D</div>
+            </div>
+        </header>
+
+        <main class="p-6 md:p-8 max-w-6xl w-full">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 grid md:grid-cols-12 overflow-hidden min-h-[500px]">
+                <!-- KIRI: DAFTAR TIKET -->
+                <div class="md:col-span-5 border-r p-5 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-xs uppercase tracking-wider text-gray-600">My Tickets</span>
+                        <button class="bg-brand-primary text-white text-xs px-3 py-1.5 rounded-lg font-semibold hover:bg-brand-dark transition">+ New</button>
+                    </div>
+                    <div class="relative">
+                        <input type="text" placeholder="Search your tickets" class="w-full pl-9 pr-4 py-2 bg-gray-50 border rounded-xl text-xs outline-none focus:ring-2 focus:ring-brand-primary">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-gray-400 text-xs"></i>
+                    </div>
+                    <div class="pt-16 text-center text-gray-400 text-xs">
+                        <i class="fa-solid fa-ticket text-3xl mb-2 text-gray-300 block"></i>
+                        No ticket yet.
+                    </div>
+                </div>
+
+                <!-- KANAN: DETAIL TIKET -->
+                <div class="md:col-span-7 p-8 flex flex-col items-center justify-center text-center">
+                    <i class="fa-regular fa-comments text-4xl text-gray-300 mb-3"></i>
+                    <p class="text-xs text-gray-600 mb-4">You have not submitted any ticket yet.</p>
+                    <button class="bg-brand-primary hover:bg-brand-dark text-white text-xs font-bold px-5 py-2.5 rounded-xl shadow transition">
+                        <i class="fa-solid fa-plus mr-1.5"></i> Submit a ticket
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
